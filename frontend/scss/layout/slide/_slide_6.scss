@@ -1,0 +1,127 @@
+.slide_6 {
+    background: url('../img/slide-6/bg.jpg') no-repeat;
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-top: 8em;
+        height: 100%;
+        position: relative;
+    }
+    &__right {
+        padding-top: 5.8em;
+        padding-left: 3em;
+        width: 53%;
+        & img {
+            width: em(212);
+            height: em(192);
+        }
+    }
+    &__head {
+        font-family: 'Akrobat';
+        font-style: normal;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: -2em;
+        color: #cc0000;
+        text-align: center;
+        margin-bottom: 3.8em;
+        & span {
+            font-size: em(270);
+            line-height: em(230, 270);
+            letter-spacing: -0.02em;
+        }
+        &--small {
+            margin-top: 0.7em;
+            font-size: 2.58em;
+            line-height: em(52, 43);
+        }
+    }
+    &__buttons {
+        margin-top: 4.4em;
+        display: flex;
+    }
+    &__button {
+        width: em(182);
+        margin-right: em(20);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__img {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        & img {
+            width: em(488);
+            height: em(760);
+        }
+    }
+    @media (orientation: portrait) {
+        background-image: url('../img/slide-2/bg--mob.jpg');
+        background-color: #ebebeb;
+        & .container {
+            width: 60%;
+            padding-top: 1.7em;
+            padding-bottom: 3em;
+        }
+        &__right {
+            padding: 0;
+            padding-top: 5em;
+            width: 100%;
+            margin: 0;
+            grid-area: c;
+            padding-top: em(40);
+            & img {
+                width: 6.75em;
+                height: 6.25em;
+            }
+        }
+        &__attention {
+            margin-bottom: 0.8em;
+        }
+        &__head {
+            margin-top: -0.4em;
+            margin-bottom: em(16);
+            & span {
+                font-size: em(138);
+                line-height: em(117, 138);
+            }
+            &--small {
+                margin-top: 0.5em;
+                font-size: 1.3em;
+                line-height: em(26);
+            }
+        }
+        &__img {
+            width: 100%;
+            margin: 0;
+            grid-area: b;
+            position: relative;
+            margin-top: 2em;
+            & img {
+                width: em(300);
+                height: em(180);
+            }
+            &:after {
+                left: 61%;
+                width: 22.875em;
+                height: 14.5em;
+            }
+        }
+        & .title {
+            grid-area: a;
+        }
+        &__buttons {
+            flex-direction: column;
+            margin-top: em(20);
+        }
+        &__button {
+            width: 100%;
+            margin-bottom: em(20);
+        }
+    }
+}

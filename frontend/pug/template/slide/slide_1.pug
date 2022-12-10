@@ -1,0 +1,28 @@
+.slide_1.slider__item.swiper-slide 
+    include ../header 
+    .container
+        .slide_1__title 
+            img(src="public/img/slide-1/title.svg", alt="")
+        .slide_1__desc 
+            | Списки солдат, которые участвовали в преступлениях в Буче, Бородянке, Гостомелие и Ирпене  давно известны и находятся на стадии рассмотрения в 
+            a(href="#") Международном военном Трибунале. 
+            | В данной базе данных вы можете найти себя, своего сослуживца или родственника, на кого  открыто уголовное производство. Данные обновляются каждый день.
+        .bg__soldier.bg__soldier--mob 
+            img(src="public/img/slide-1/soldier.png", alt="")
+        .slide_1__bottom
+            .search 
+                input(type="text" placeholder="ФИО, личный номер или № бригады").search__input
+                button.search__button 
+                    span Поиск 
+            a(href="#").button 
+                span Скачать PDF
+
+    .bg 
+        .bg__text 
+            img(src="public/img/slide-1/bg_txt.svg", alt="")
+        .bg__soldier 
+            img(src="public/img/slide-1/soldier.png", alt="")
+        .bg__smoke 
+            picture 
+                source(media="(orientation: portrait)", srcset="public/img/slide-1/smoke--mob.png")
+                img(src="public/img/slide-1/smoke.png", alt="")

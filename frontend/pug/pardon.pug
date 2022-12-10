@@ -1,0 +1,16 @@
+- var title = "Помилование";
+doctype html
+html
+    include includes/head
+    body
+        .body-wrap.pardon 
+            include template/pardon/section_1
+            include template/pardon/section_2
+            include template/pardon/section_3
+            include template/pardon/section_4
+            .button__fly
+                a(href="#").button.bgred.telegram
+                    span Связаться в Telegram
+
+        include template/popup
+    include includes/foot

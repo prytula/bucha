@@ -1,0 +1,14 @@
+- var title = "Сдать за $1000";
+doctype html
+html
+    include includes/head
+    body
+        .body-wrap.thousand 
+            include template/thousand/section_1
+            include template/thousand/section_2
+            .button__fly
+                a(href="#").button.bgred.telegram
+                    span Связаться в Telegram
+
+        include template/popup
+    include includes/foot

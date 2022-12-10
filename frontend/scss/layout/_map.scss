@@ -1,0 +1,80 @@
+.map {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #fff;
+    padding: em(40);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    &__title {
+        font-family: 'Akrobat';
+        font-style: normal;
+        color: #000000;
+        margin-bottom: 2.8em;
+        & span {
+            font-weight: 900;
+            font-size: em(28);
+            line-height: 140%;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 2.05em;
+        & img {
+            width: em(24);
+            height: em(24);
+            margin-right: em(16);
+        }
+        & span {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: em(18);
+            line-height: em(28, 18);
+            color: #000000;
+        }
+    }
+    &__left {
+        width: 42%;
+    }
+    &__right {
+        width: 58%;
+        & img {
+            width: em(632);
+            height: em(415);
+        }
+    }
+    @media (orientation: portrait) {
+        flex-direction: column;
+        padding: em(20);
+        margin-bottom: 0;
+        &__left {
+            width: 100%;
+        }
+        &__right {
+            width: 100%;
+        }
+        &__title {
+            margin-bottom: 1.7em;
+            & span {
+                font-size: em(19);
+                line-height: em(24, 19);
+            }
+        }
+        &__item {
+            margin-bottom: 0.95em;
+            & span {
+                font-size: em(14);
+                line-height: em(28, 14);
+            }
+        }
+        &__right {
+            & img {
+                width: em(632);
+                height: 12.6em;
+            }
+        }
+    }
+}

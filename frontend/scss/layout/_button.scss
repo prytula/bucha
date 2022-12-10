@@ -1,0 +1,81 @@
+.button {
+    font-family: 'Akrobat';
+    font-style: normal;
+    font-weight: 600;
+    padding: em(12) 1.5em em(12);
+    
+    height: em(50);
+    border: em(1) solid #CC0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color .2s ease-in-out, background .2s ease-in-out, border-color .2s ease-in-out;
+    color: #FFFFFF;
+    max-width: em(182);
+    & span {
+        font-size: em(20);
+        line-height: em(24, 20);
+        letter-spacing: -0.02em;
+    }
+    &:hover {
+        color: #fff;
+        background: #CC0000;
+        border-color: #CC0000;
+    }
+
+    &.transparent {
+        color: #000;
+        &:hover {
+            background: #CC0000;
+            border-color: #CC0000;
+            color: #fff;
+        }
+    }
+    &.bgred {
+        background: #CC0000;
+        border-color: #CC0000;
+        color: #fff;
+        &:hover {
+            color: #CC0000;
+            background: #fff;
+            border-color: #CC0000;
+        }
+    }
+    &.telegram {
+        width: em(393) ;
+        height: em(70) ;
+        max-width: unset ;
+        margin-bottom: 0 ;
+        margin-top: 3em ;
+        & span {
+            font-size: em(28) ;
+            line-height: em(34, 28);
+        }
+    }
+    &__fly {
+        display: none;
+    }
+    @media (orientation: portrait) {
+        width: 100%;
+        max-width: unset;
+        &__fly {
+            display: block;
+        }
+        &.telegram {
+            width: 60%;
+            height: 3.075em;
+            margin-bottom: 0;
+            margin-top: 0em;
+            
+            position: fixed;
+            bottom: 2em;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 7;
+            & span {
+                font-size: 1.25em;
+                line-height: 1.01429em;
+            }
+        }
+    }
+}

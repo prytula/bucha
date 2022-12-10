@@ -1,0 +1,172 @@
+.slide_8 {
+    background: url('../img/slide-8/bg.jpg') no-repeat;
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-top: 8em;
+        height: 100%;
+        position: relative;
+    }
+    &__attention {
+        width: 100%;
+        display: flex;
+        margin-top: 10.5em;
+        & img {
+            width: em(212);
+            height: em(192);
+        }
+    }
+    &__head {
+        font-family: 'Akrobat';
+        font-style: normal;
+        font-weight: 900;
+        letter-spacing: -0.08em;
+        text-transform: uppercase;
+        color: #000000;
+        padding-left: 1.6em;
+        margin-top: -1em;
+        & span {
+            font-size: em(62);
+            line-height: em(74, 62);
+        }
+    }
+    &__contacts {
+        display: flex;
+        width: 100%;
+        margin-top: 7.5em;
+    }
+    &__contact {
+        font-family: 'Akrobat';
+        font-style: normal;
+        font-weight: 900;
+        text-align: left;
+        margin-right: 8.1em;
+        &:last-child {
+            margin-right: 0;
+        }
+        &--info {
+            letter-spacing: -0.09em;
+            color: #CC0000;
+            & span {
+                font-size: em(80);
+                line-height: em(96, 80);
+            }
+        }
+        &--title {
+            margin-top: 1.2em;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: #000000;
+            & span {
+                font-size: em(43);
+                line-height: em(30, 43);
+            }
+        }
+    }
+    @media (orientation: portrait) {
+        background-image: url('../img/slide-2/bg--mob.jpg');
+        background-color: #ebebeb;
+        & .container {
+            width: 60%;
+            padding-top: 1.7em;
+            padding-bottom: 3em;
+        }
+        &__attention {
+            margin-top: 0.5em;
+            flex-direction: column;
+            & img {
+                width: 6.65em;
+                height: 6.2em;
+            }
+        }
+        &__head {
+            padding-top: 2em;
+            padding-left: 0;
+            & span {
+                font-size: 2.8em;
+                line-height: 1.09355em;
+            }
+        }
+        &__contacts {
+            margin-top: 2.2em;
+            flex-direction: column;
+        }
+        &__contact {
+            margin-right: 0;
+            width: 100%;
+            margin-top: 2.3em;
+            &:first-child {
+                margin-top: 0;
+            }
+            &--info {
+                & span {
+                    font-size: 2.8em;
+                }
+            }
+            &--title {
+                margin-top: 0.8em;
+                & span {
+                    font-size: 1.5875em;
+                }
+            }
+        }
+        // &__right {
+        //     padding: 0;
+        //     padding-top: 5em;
+        //     width: 100%;
+        //     margin: 0;
+        //     grid-area: c;
+        //     padding-top: em(40);
+        //     & img {
+        //         width: 6.75em;
+        //         height: 6.25em;
+        //     }
+        // }
+        // &__attention {
+        //     margin-bottom: 0.8em;
+        // }
+        // &__head {
+        //     margin-top: -0.4em;
+        //     margin-bottom: em(16);
+        //     & span {
+        //         font-size: em(138);
+        //         line-height: em(117, 138);
+        //     }
+        //     &--small {
+        //         margin-top: 0.5em;
+        //         font-size: 1.3em;
+        //         line-height: em(26);
+        //     }
+        // }
+        // &__img {
+        //     width: 100%;
+        //     margin: 0;
+        //     grid-area: b;
+        //     position: relative;
+        //     margin-top: 2em;
+        //     & img {
+        //         width: em(300);
+        //         height: em(180);
+        //     }
+        //     &:after {
+        //         left: 61%;
+        //         width: 22.875em;
+        //         height: 14.5em;
+        //     }
+        // }
+        // & .title {
+        //     grid-area: a;
+        // }
+        // &__buttons {
+        //     flex-direction: column;
+        //     margin-top: em(20);
+        // }
+        // &__button {
+        //     width: 100%;
+        //     margin-bottom: em(20);
+        // }
+    }
+}

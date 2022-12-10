@@ -1,0 +1,85 @@
+.preloader {
+    font-size: 2em;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.visible {
+        opacity: 1;
+        z-index: 2;
+        position: static;
+    }
+    &__icn {
+        opacity:0.75;
+        width: em(14);
+        height: em(14);
+        -webkit-animation: clockwise 500ms linear infinite;
+        animation: clockwise 500ms linear infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em;
+    }
+    &__cut {
+        position: relative;
+        width: 0.8375em;
+        height: em(14);
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__donut--fake {
+        box-sizing: border-box;
+        width: em(14);
+        height: em(14);
+        border: em(2) solid red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: none;
+        margin:0;
+    }
+    &__donut {
+        box-sizing: border-box;
+        width: em(14);
+        height: em(14);
+        border: em(2) solid #FFF;
+        border-radius: 50%;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: none;
+        margin:0;
+        // -webkit-animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
+        // animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
+    }
+}
+  
+@-webkit-keyframes clockwise {
+    0% { -webkit-transform: rotate(0deg) }
+    100% { -webkit-transform: rotate(360deg) }
+}
+@keyframes clockwise {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+@-webkit-keyframes donut-rotate {
+    0% { -webkit-transform: rotate(0) }
+    50% { -webkit-transform: rotate(-140deg) }
+    100% { -webkit-transform: rotate(0) }
+}
+@keyframes donut-rotate {
+    0% { transform: rotate(0) }
+    50% { transform: rotate(-140deg) }
+    100% { transform: rotate(0) }
+}
+  

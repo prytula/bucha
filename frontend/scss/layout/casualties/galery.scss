@@ -1,0 +1,38 @@
+.galery {
+    margin-bottom: 3.5em;
+    // width: 100%;
+    overflow: hidden;
+    &--margin {
+        margin-top: 3.5em;
+    }
+    &__wrap {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: em(393);
+        height: em(225);
+        margin: 0.49em;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        &:nth-child(3n-2) {
+            margin-left: 0;
+        }
+    }
+    @media (orientation: portrait) {
+        margin-bottom: 1.7em;
+        &__wrap {
+            flex-wrap: unset;
+        }
+        &__item {
+            width: em(300);
+            height: em(180);
+            margin: 0.32em !important;
+        }
+    }
+}

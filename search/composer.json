@@ -1,0 +1,20 @@
+{
+    "name": "clickable/bucha-search",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Oleksandr Roshchupkin",
+            "email": "roshchupkin@clickable.agency"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Search\\": "src/",
+            "Cli\\Command\\": "cli/Command/"
+        },
+        "files": ["config/config.php", "vendor/google-api/vendor/autoload.php"]
+    },
+    "require": {
+
+    }
+}

@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Druk Text Cyr';
+    src: url('DrukTextCyr-MediumItalic.woff2') format('woff2'),
+        url('DrukTextCyr-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk Text Cyr';
+    src: url('DrukTextCyr-HeavyItalic.woff2') format('woff2'),
+        url('DrukTextCyr-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk Text Cyr';
+    src: url('DrukTextCyr-Medium.woff2') format('woff2'),
+        url('DrukTextCyr-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk Text Cyr';
+    src: url('DrukTextCyr-Heavy.woff2') format('woff2'),
+        url('DrukTextCyr-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk Text Cyr';
+    src: url('DrukTextCyr-BoldItalic.woff2') format('woff2'),
+        url('DrukTextCyr-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk Text Cyr';
+    src: url('DrukTextCyr-Bold.woff2') format('woff2'),
+        url('DrukTextCyr-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

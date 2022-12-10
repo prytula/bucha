@@ -1,0 +1,112 @@
+.slide_3 {
+    background: url('../img/slide-3/bg.jpg');
+
+    & .container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__title {
+        width: em(619);
+        height: 100vh;
+    }
+    &__right {
+        width: 33%;
+    }
+    &__title {
+        width: em(692);
+        height: 100vh;
+        background: url('../img/slide-3/item_bg.jpg') no-repeat;
+        background-position: center top;
+        background-size: 100% auto;
+        color: #CC0000;
+        font-family: 'Akrobat';
+        font-style: normal;
+        font-weight: 900;
+        text-align: center;
+        padding-top: 17.4em;
+        letter-spacing: -0.02em;
+        &--1 {
+            font-size: em(480);
+            line-height: em(250, 480);
+        }
+        &--2 {
+            font-size: em(130);
+            line-height: 0.96em;
+            margin-top: 0.62em;
+            display: block;
+        }
+        &--3 {
+            font-size: em(109);
+        }
+    }
+    &__right {
+        margin-left: 8em;
+        & img {
+            width: em(387);
+            height: em(620);
+        }
+    }
+    &__text {
+        margin-top: 4.5em;
+        margin-bottom: 4.2em;
+    }
+
+    @media (orientation: landscape) {
+        @media (min-aspect-ratio: 1920/1000) {
+            &__title {
+                background-size: auto 100%;
+            }
+        }
+        @media (max-aspect-ratio: 1920/1080) {
+            &__title {
+                background-size: auto 100%;
+            }
+        }
+    }
+    @media (orientation: portrait) {
+        background-image: url('../img/slide-3/bg--mob.jpg');
+        background-position: center bottom !important;
+        background-repeat: no-repeat;
+        background-color: #000;
+        & .container {
+            flex-direction: column;
+            width: 60%;
+            padding-bottom: 3em;
+        }
+        &__title {
+            margin-left: 0;
+            width: em(300);
+            height: em(468);
+            margin: auto;
+            padding-top: 5.3em;
+            &--1 {
+                font-size: 13.625em;
+                line-height: 0.9em;
+            }
+            &--2 {
+                margin-top: 0.1em;
+                font-size: 3.6125em;
+                line-height: 0.63em;
+            }
+            &--3 {
+                font-size: 3.075em;
+                line-height: 1.09em;
+                margin-top: 0.18em;
+            }
+        }
+        &__right {
+            width: 100%;
+            margin: 0;
+            & img {
+                width: em(300);
+                height: em(180);
+            }
+        }
+        &__text {
+            margin-top: 1.2em;
+            margin-bottom: 1.4em;
+        }
+    }
+}

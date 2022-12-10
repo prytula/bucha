@@ -1,0 +1,70 @@
+.text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    &.black {
+        color: #000000;
+    }
+    &.white {
+        color: #ffffff;
+    }
+    & p {
+        font-size: em(18);
+        line-height: em(28, 18);
+    }
+    & a {
+        color: #c00;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0em;
+            right: 2%;
+            height: em(2);
+            width: 98%;
+            background: #cc0000;
+            transition: width .2s ease-in-out
+        }
+        &:hover {
+            &::after {
+                width: 0;
+            }
+        }
+    }
+}
+
+.title {
+    font-family: 'Akrobat';
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    &.red {
+        color: #CC0000;
+    }
+    &.black {
+        color: #000000;
+    }
+    & span {
+        font-size: em(100);
+        line-height: em(120, 100);
+        letter-spacing: -0.02em;
+    }
+}
+
+
+
+@media (orientation: portrait) {
+    .text {
+        & p {
+            font-size: em(14);
+        }
+    }
+    .title {
+        & span {
+            font-size: 3.17em;
+            line-height: 1em;
+        }
+    }
+}

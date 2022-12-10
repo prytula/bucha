@@ -1,0 +1,81 @@
+.buttons {
+    position: relative;
+    &__wrapper {
+        background: url('../img/buttons_bg.jpg') no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+    }
+    & .container {
+        width: em(1212);
+        margin: auto;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 2.5em;
+        padding-bottom: 2.1em;
+    }
+    & .button {
+        display: inline-block;
+        max-width: unset;
+        width: 32.6%;
+        height: 4.125em;
+        text-align: center;
+        & span {
+            font-size: 1.69em;
+            line-height: 1.4em;
+        }
+    }
+    &__flag {
+        display: none;
+    }
+    @media (orientation: portrait) {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        transition: transform .5s ease-in-out;
+        transform: translateY(100%);
+        &.open {
+            transform: translateY(0%);
+        }
+        &__wrapper {
+            background-image: url('../img/buttons_bg--mob.jpg');
+        }
+        & .container {
+            flex-direction: column;
+            width: 60%;
+            padding-top: 1.7em;
+            padding-bottom: 1.7em;
+        }
+        & .button {
+            width: 100%;
+            height: 3.225em;
+            text-align: center;
+            margin-bottom: 0.6em !important;
+            & span {
+                font-size: 1.22em;
+            }
+        }
+        &__flag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: em(90);
+            height: em(90);
+            background: #CC0000;
+            border: em(2) solid #FFFFFF;
+            box-shadow: 0 0 em(20) rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: -7em;
+            right: 2em;
+            & img {
+                width: em(53);
+                height: em(53);
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.popup 
+    .popup__close 
+        svg(xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M1.08148 1.08149C0.495689 1.66727 0.495688 2.61702 1.08147 3.20281L12.0416 14.163L1.08147 25.1231C0.495687 25.7089 0.495688 26.6587 1.08147 27.2444C1.66726 27.8302 2.61701 27.8302 3.20279 27.2444L14.1629 16.2843L25.1231 27.2444C25.7089 27.8302 26.6586 27.8302 27.2444 27.2444C27.8302 26.6587 27.8302 25.7089 27.2444 25.1231L16.2843 14.163L27.2444 3.20281C27.8302 2.61702 27.8302 1.66727 27.2444 1.08149C26.6586 0.495703 25.7089 0.495703 25.1231 1.08149L14.163 12.0416L3.2028 1.08149C2.61701 0.495702 1.66726 0.495703 1.08148 1.08149Z' fill='#CC0000')
+
+    .popup__wrapper
+        .popup__title 
+            span ПОИСК ПО БАЗЕ ВОЕННЫХ ПРЕСТУПНИКОВ
+        form(action="search/search.php?").popup__form 
+            label(for="search") ФИО, личный номер или № бригады
+            input(type="text" id='search' name='search' placeholder="Иван").popup__input 
+            button(type="button").popup__button Поиск
+            
+        .popup__result
+            .preloader
+                .preloader__icn
+                    .preloader__cut
+                        .preloader__donut
+
+            .popup__result--true
+                .popup__result_title 
+                    span По вашему запросу найдены совпадения:
+                .popup__result_row 
+                    .popup__result_header 
+                        .name ФИО
+                        .index Личный номер
+                        .number Номер бригады
+                        .status 
+                .popup__result_table 
+                    .popup__result_row 
+                        .popup__result_values.example 
+                            .name 
+                                span.value Иванов Петр Иванович 
+                            .index 
+                                span.mob-title Личный номер: 
+                                span.value 9-971188 
+                            .number 
+                                span.mob-title Номер бригады: 
+                                span.value 64
+                            .status 
+                                span 
+                                    img(src="public/img/popup/close.svg", alt="")
+
+                .popup__result_desc.center 
+                    span Люди из списка совпадений идентиицированны и находятся в том или ином статусе рассмотрения судебных дел
+                .popup__result_items
+                    .popup__result_item
+                        img(src="public/img/popup/union.svg", alt="")
+                        span Осужден
+                    .popup__result_item
+                        img(src="public/img/popup/check.svg", alt="")
+                        span Данные переданы в МВТ
+                    .popup__result_item
+                        img(src="public/img/popup/close.svg", alt="")
+                        span Данные отсуствуют
+
+            .popup__result--false
+                .popup__result_title 
+                    span По вашему запросу совпадений  не найдено. 
+                .popup__result_desc 
+                    span Это значит, что человек еще не идентифицирован.
+                br
+                br
+                .popup__result_desc 
+                    span Если вы уверены, что данное лицо участвовало в военных преступлениях на територии Украины, воспользуйтесь вариантами представленными ниже: 
+
+            .popup__buttons 
+                a(href="pardon.html").popup__button 
+                    span Помилование 
+                a(href="giveup.html").popup__button 
+                    span Сдаться 
+                a(href="thousand.html").popup__button 
+                    span Сдать за 1000$ 
+                

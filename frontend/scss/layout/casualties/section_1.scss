@@ -1,0 +1,184 @@
+.section_1 {
+    background: url('../img/casualties/section-1_bg.jpg') no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    background-color: #0d0d0d;
+    padding-bottom: 5.1em;
+    position: relative;
+    &.white {
+        background-image: url('../img/casualties/section-1_bg_white.jpg');
+        background-position: center top;
+        background-color: #fff;
+    }
+    .criminals & {
+        background-image: url('../img/criminals/section-1_bg_criminals.jpg');
+    }
+    .giveup & {
+        background-image: url('../img/giveup/section-1_bg_giveup.jpg');
+    }
+    .thousand & {
+        background-image: url('../img/thousand/section-1_bg_thousand.jpg');
+    }
+    & .container {
+        width: em(1212);
+        margin: auto;
+        position: relative;
+        z-index: 2;
+    }
+    &__title {
+        font-family: 'Akrobat';
+        font-style: normal;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #CC0000;
+        margin-top: 2.8em;
+        margin-bottom: 2.5em;
+        & span {
+            font-size: em(197);
+            line-height: em(236, 197);
+            letter-spacing: -0.02em;
+        }
+    }
+    &__head {
+        font-family: 'Akrobat';
+        font-style: normal;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 3.3em;
+        &.black {
+            color: #000000;
+        }
+        & .red {
+            color: #CC0000;
+            font-size: 1em;
+        }
+        & span {
+            font-size: em(70);
+            line-height: em(70, 70);
+            letter-spacing: -0.02em;
+        }
+        .white & {
+            & br {
+                display: none;
+            }
+        }
+    }
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    &__left {
+        width: 50%;
+        padding-right: 4.9em;
+    }
+    &__right {
+        width: 50%;
+        padding-left: 1.9em;
+        padding-top: 0.7em;
+    }
+    & .bg {
+        &__smoke {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            & img {
+                width: 100%;
+            }
+        }
+    }
+    &__button {
+        width: em(393) !important;
+        height: em(70) !important;
+        max-width: unset !important;
+        // margin-top: 2em;
+        margin-bottom: 0 !important;
+        margin-top: 2.2em !important;
+        & span {
+            font-size: em(28) !important;
+            line-height: em(34, 28);
+        }
+    }
+
+    @media (orientation: landscape) {
+        @media (max-aspect-ratio: 1920/1040) {
+            background-size: auto 100% !important;
+        }
+    }
+
+    @media (orientation: portrait) {
+        background-image: url('../img/casualties/section-1_bg--mob.jpg');
+        padding-bottom: 2.8em;
+        &.white {
+            padding-bottom: 2.4em;
+            background-image: url('../img/casualties/section-1_bg_white--mob.jpg');
+        }
+        .criminals & {
+            background-image: url('../img/criminals/section-1_bg_criminals--mob.jpg');
+            background-position: center top;
+            background-size: 100% 100%;
+        }
+        .giveup & {
+            background-image: url('../img/giveup/section-1_bg_giveup--mob.jpg');
+            background-position: center top;
+            background-size: 100% 100%;
+        }
+        .thousand & {
+            background-image: url('../img/thousand/section-1_bg_thousand--mob.jpg');
+            background-position: center top;
+            background-size: 100% 100%;
+        }
+        &.white .button.telegram {
+            display: none;
+        }
+        & .container {
+            width: 60%;
+        }
+        &__title {
+            margin-top: 2em;
+            margin-bottom: 1em;
+            & span {
+                font-size: 3.1125em;
+            }
+        }
+        &__head {
+            margin-bottom: 1.2em;
+            & span {
+                font-size: 3.1125em;
+                line-height: 1.3em;
+            }
+            .white & {
+                & br {
+                    display: block;
+                }
+            }
+        }
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__center {
+            width: 100%;
+        }
+        &__left {
+            width: 100%;
+            padding: 0;
+        }
+        &__head {
+            & br {
+                display: none;
+            }
+            & span {
+                font-size: 2em;
+            }
+        }
+        &__right {
+            width: 100%;
+            padding-left: 0;
+            padding-top: 1.5em;
+        }
+    }
+}

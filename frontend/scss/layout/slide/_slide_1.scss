@@ -1,0 +1,144 @@
+.slide_1 {
+    background-color: #000000;
+    // background-image: url('../img/slide-1/smoke.png');
+    // background-repeat: no-repeat;
+    // background-size: 100% auto;
+    // background-position: bottom center;
+    & .container {
+        padding-top: 8em;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__title {
+        width: em(521);
+        height: em(341);
+        margin-bottom: 4em;
+    }
+    &__desc {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: em(18);
+        line-height: em(28, 18);
+        max-width: 31em;
+        margin-bottom: 3.5em;
+        & a {
+            color: #CC0000;
+            // border-bottom: em(1) solid #CC0000;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0em;
+                right: 2%;
+                height: em(2);
+                width: 98%;
+                background: #cc0000;
+                transition: width .2s ease-in-out
+            }
+            &:hover {
+                &::after {
+                    width: 0;
+                }
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+    }
+
+    & .bg {
+        &__text {
+            position: absolute;
+            right: 0;
+            top: 10em;
+            & img {
+                width: em(935);
+                height: em(324);
+            }
+        }
+        &__soldier {
+            position: absolute;
+            right: 13em;
+            top: 9.4em;
+            &--mob {
+                display: none;
+            }
+            & img {
+                width: em(954);
+                height: em(930);
+            }
+        }
+        &__smoke {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            & img {
+                width: 100%;
+                height: em(930);
+            }
+        }
+    }
+    
+    @media (orientation: portrait) {
+        & .container {
+            width: 80%;
+            padding-top: 2.3em;
+            padding-bottom: 3em;
+        }
+        &__title {
+            width: 18.9375em;
+            height: 13.25em;
+            margin: 0 auto;
+        }
+        &__desc {
+            font-size: 0.85em;
+            max-width: 22em;
+            margin: auto;
+            padding-top: 11.9em;
+            z-index: 6;
+            position: relative;
+        }
+        &__bottom {
+            flex-wrap: wrap;
+            padding-top: 1.6em;
+            width: 75%;
+            margin: auto;
+            & .button {
+                width: 9em;
+            }
+        }
+        & .bg {
+            &__text {
+                top: 14em;
+            }
+            &__soldier {
+                right: 4.5em;
+                top: 15.4em;
+                display: none;
+                z-index: 5;
+                &--mob {
+                    display: block;
+                    right: 0.6em;
+                    top: 11.4em;
+                    & img {
+                        width: em(400);
+                        height: 100%;
+                        max-width: unset;
+                        max-height: unset;
+                    }
+                }
+            }
+            &__smoke {
+                & img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
